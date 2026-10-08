@@ -1,0 +1,3 @@
+interface:
+  display_name: "Apply threat lenses"
+  short_description: "STRIDE and pluggable lenses"

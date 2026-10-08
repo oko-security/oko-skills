@@ -1,0 +1,17 @@
+# TODO: build src/ for this target (see examples/notes-api/THREAT_MODEL.md for intent)
+must_find:
+  - outcome: cross-tenant data access
+    actor: remote_auth
+    surface: notes API
+  - outcome: internal network access via SSRF
+    actor: remote_auth
+    surface: export worker
+  - outcome: data exfiltration via prompt injection
+    actor: remote_auth
+    surface: summarize endpoint
+must_not_find:
+  - pattern: "routes\\.py:\\d+"      # a file:line in the threat column = vuln, not threat
+entry_points: [notes API, share link, export worker, summarize endpoint]
+top_threat: internal network access via SSRF
+open_questions:
+  - worker identity / metadata access

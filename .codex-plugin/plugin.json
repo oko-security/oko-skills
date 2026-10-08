@@ -1,0 +1,17 @@
+{
+  "name": "oko",
+  "version": "0.1.0",
+  "description": "Threat modeling skills for security teams.",
+  "author": { "name": "oko maintainers", "email": "dev@okosecurity.com" },
+  "repository": "https://github.com/oko-security/oko-skills",
+  "license": "Apache-2.0",
+  "keywords": ["security", "threat-modeling", "stride", "appsec"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "oko",
+    "shortDescription": "Code-grounded threat models for security teams",
+    "category": "Security",
+    "capabilities": ["Interactive", "Read", "Write"],
+    "defaultPrompt": ["Threat model this repo.", "Does this PR change our threat model?"]
+  }
+}

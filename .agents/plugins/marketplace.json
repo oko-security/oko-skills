@@ -1,0 +1,12 @@
+{
+  "name": "oko",
+  "interface": { "displayName": "oko" },
+  "plugins": [
+    {
+      "name": "oko",
+      "source": { "source": "url", "url": "./" },
+      "policy": { "installation": "AVAILABLE", "authentication": "ON_INSTALL" },
+      "category": "Security"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "oko",
+  "description": "Marketplace for the oko threat modeling skills",
+  "owner": { "name": "oko maintainers", "email": "dev@okosecurity.com" },
+  "plugins": [
+    {
+      "name": "oko",
+      "description": "Threat modeling skills for security teams.",
+      "version": "0.1.0",
+      "source": "./"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Threat model export"
+  short_description: "Export to JSON, Mermaid, OTM, tickets"
+policy:
+  allow_implicit_invocation: false

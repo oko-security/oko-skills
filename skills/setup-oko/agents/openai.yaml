@@ -1,0 +1,5 @@
+interface:
+  display_name: "Setup oko"
+  short_description: "Configure oko for your security team"
+policy:
+  allow_implicit_invocation: false

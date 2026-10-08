@@ -1,0 +1,12 @@
+{
+  "name": "oko",
+  "description": "Threat modeling skills for security teams: code-grounded THREAT_MODEL.md via bootstrap, owner interview, STRIDE and pluggable lenses.",
+  "version": "0.1.0",
+  "author": { "name": "oko maintainers", "email": "dev@okosecurity.com" },
+  "homepage": "https://github.com/oko-security/oko-skills",
+  "repository": "https://github.com/oko-security/oko-skills",
+  "license": "Apache-2.0",
+  "keywords": ["security", "threat-modeling", "stride", "appsec", "skills"],
+  "skills": "./skills/",
+  "hooks": "./hooks/hooks.json"
+}

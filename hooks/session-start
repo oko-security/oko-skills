@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+# Session-start hook: hand the using-oko router to the agent as extra context.
+# Each agent reads a different JSON key, so we print exactly one shape.
+set -euo pipefail
+
+here="$(cd "$(dirname "$0")" && pwd)"
+router="$here/../skills/using-oko/SKILL.md"
+
+if [ -n "${CURSOR_PLUGIN_ROOT:-}" ]; then
+  shape=cursor
+elif [ -n "${CLAUDE_PLUGIN_ROOT:-}" ] && [ -z "${COPILOT_CLI:-}" ]; then
+  shape=claude
+else
+  shape=plain
+fi
+
+python3 - "$router" "$shape" <<'PY'
+import json, sys
+path, shape = sys.argv[1], sys.argv[2]
+try:
+    router = open(path, encoding="utf-8").read()
+except OSError:
+    router = "(oko: skills/using-oko/SKILL.md not found)"
+note = ("oko threat modeling skills are available. The using-oko router follows; "
+        "open any other oko skill through your skill mechanism.\n\n" + router)
+if shape == "cursor":
+    out = {"additional_context": note}
+elif shape == "claude":
+    out = {"hookSpecificOutput": {"hookEventName": "SessionStart", "additionalContext": note}}
+else:
+    out = {"additionalContext": note}
+print(json.dumps(out))
+PY

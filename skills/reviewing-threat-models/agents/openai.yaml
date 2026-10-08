@@ -1,0 +1,3 @@
+interface:
+  display_name: "Review threat model"
+  short_description: "Quality gate for threat models"

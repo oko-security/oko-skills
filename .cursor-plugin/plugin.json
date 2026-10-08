@@ -1,0 +1,7 @@
+{
+  "name": "oko",
+  "version": "0.1.0",
+  "description": "Threat modeling skills for security teams.",
+  "skills": "./skills/",
+  "hooks": "./hooks/hooks-cursor.json"
+}

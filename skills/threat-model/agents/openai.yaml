@@ -1,0 +1,5 @@
+interface:
+  display_name: "Threat model"
+  short_description: "Build or refresh THREAT_MODEL.md"
+policy:
+  allow_implicit_invocation: false

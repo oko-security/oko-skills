@@ -1,0 +1,3 @@
+interface:
+  display_name: "Write threat model"
+  short_description: "Schema and validator"

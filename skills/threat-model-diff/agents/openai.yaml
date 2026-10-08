@@ -1,0 +1,5 @@
+interface:
+  display_name: "Threat model diff"
+  short_description: "Does this change affect the threat model?"
+policy:
+  allow_implicit_invocation: false

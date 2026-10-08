@@ -1,0 +1,3 @@
+interface:
+  display_name: "Generalize threats"
+  short_description: "Turn vulns into durable threats"

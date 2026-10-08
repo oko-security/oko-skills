@@ -1,0 +1,11 @@
+{
+  "name": "oko-skills",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Threat modeling skills for any AI agent.",
+  "license": "Apache-2.0",
+  "scripts": {
+    "validate": "python3 scripts/validate.py",
+    "link": "bash scripts/link-skills.sh"
+  }
+}

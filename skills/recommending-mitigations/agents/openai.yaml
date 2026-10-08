@@ -1,0 +1,3 @@
+interface:
+  display_name: "Recommend mitigations"
+  short_description: "Class-level controls"
